@@ -1,0 +1,23 @@
+<div class="mt-4">
+  <h3>Form Edit</h3>
+  <form class="mt-4" method="POST" action="/courses/{{course._id}}?_method=PUT">
+    <div class="form-group">
+      <label for="name" class="form-label">Full Name</label>
+      <input type="text" class="form-control"  value="{{course.name}}" id="name" name="name">
+    </div>
+    <div class="form-group">
+      <label for="user" class="form-label">User</label>
+      <input type="text" class="form-control" value="{{course.user}}" id="user" name="user">
+    </div>
+    <div class="form-group">
+      <label for="sdt" class="form-label">SDT</label>
+      <input type="text" class="form-control" value="{{course.sdt}}" id="sdt" name="sdt">
+    </div>
+    <div class="form-group">
+      <label for="pass" class="form-label">Password</label>
+      <input type="text" class="form-control" value="{{course.pass}}" id="pass" name="pass">
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+  </form>
+
+</div>

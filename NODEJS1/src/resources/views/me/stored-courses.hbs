@@ -1,0 +1,31 @@
+<div class="mt-4">
+    <h3>UPDATE</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">User</th>
+                <th scope="col">Pass</th>
+                <th scope="col">SDT</th>
+                <th scope="col">Ngày tạo</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each courses}}
+            <tr>
+                <th scope="row">{{sum @index 1}}</th>
+                <td>{{this.name}}</td>
+                <td>{{this.user}}</td>
+                <td>{{this.pass}}</td>
+                <td>{{this.sdt}}</td>
+                <td>{{this.createdAt}}</td>
+                <td><a href="/courses/{{this._id}}/edit" class="btn btn-link" style="text-decoration: none;">Sửa</a>
+                <a href="/courses/{{this._id}}/delete" class="btn btn-link" style="text-decoration: none;">Xóa</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
