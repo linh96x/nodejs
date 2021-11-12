@@ -7,4 +7,10 @@ router.get('/', siteController.index);
 //pt cũ
 router.use('/search', siteController.show);
 router.use('/', siteController.index);
+//
+/*
+router.get('/search', function(req,res,next){
+    var q = req.res.q;
+*/
+
 module.exports = router;

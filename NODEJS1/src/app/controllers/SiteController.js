@@ -20,13 +20,14 @@ class SiteController {
     Course.find({})
       .then((courses) => {
         //courses = courses.map(course => course.toObject())
-        res.render('search', {
+        res.render('home', {
           courses: mutipleMongooseToObject(courses),
         });
       })
       .catch(next);
   }
   show(req, res) {
+    res.render('search');
   }
 }
 module.exports = new SiteController();

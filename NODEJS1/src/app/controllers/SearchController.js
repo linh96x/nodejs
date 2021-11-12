@@ -2,16 +2,17 @@ const Course = require('../models/Course');
 
 const { mutipleMongooseToObject } = require('../../util/mongoose');
 class SearchController {
-  
-  storedCourses(req, res, next) {
-    
-    Course.find({ name:'linh' })
-      .then((courses) =>
-        res.render('', {
-          courses: mutipleMongooseToObject(courses),
-        }),
-      )
-      .catch(next);
-  }
-}
+ 
+//   show(req, res, next) {
+// 
+//     Course.find({ $search })
+//       .then((courses) =>
+//         res.render('search', {
+//           courses: mutipleMongooseToObject(courses),
+//         }),
+//       )
+//       .catch(next);
+//   }
+// res.render('search');
+ }
 module.exports = new SearchController();

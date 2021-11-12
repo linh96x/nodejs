@@ -9,5 +9,9 @@ router.get('/:id/edit', courseController.edit);
 router.put('/:id', courseController.update);
 router.delete('/:id', courseController.delete); 
 router.get('/:slug', courseController.show);
+//
+// router.get('/:name',function(req.res){
+//     var regex = new RegExp(req.params.name,'i');
+// })
 
 module.exports = router;
