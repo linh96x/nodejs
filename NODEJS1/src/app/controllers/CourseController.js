@@ -48,7 +48,7 @@ Course.deleteOne({ _id: req.params.id })
   }
   //[SEARCH]
   search(req, res, next) {
-    Course.findById(req.params.name).then((course) =>
+    Course.find(req.params.name).then((course) =>
       res.render('search', {
         course: mongooseToObject(course),
       }),
