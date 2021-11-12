@@ -12,7 +12,7 @@ db.connect();
 //img/logo.png
 app.get(express.static(path.join(__dirname, 'public')));
 //weqe
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(methodOverride('_method'));
 app.get(

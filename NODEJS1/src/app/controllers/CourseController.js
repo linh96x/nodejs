@@ -39,6 +39,35 @@ class CourseController {
       .then(() => res.redirect('http://localhost:3000'))
       .catch(next);
   }
+  //[DELETE] / courses/:id/
+  delete(req, res, next){
+Course.deleteOne({ _id: req.params.id })
+.then(() => res.redirect('back'))
+.catch(next);
+
+  }
+  //[SEARCH]
+  search(req, res, next) {
+    Course.findById(req.params.name).then((course) =>
+      res.render('search', {
+        course: mongooseToObject(course),
+      }),
+    );
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 //GET,POST,PUT,PATH,DELETE,OPTIONS,HEAD
 //dùng PUT để chỉnh sửa
