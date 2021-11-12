@@ -17,6 +17,7 @@ class SiteController {
 
   //[GET] /news/:slug
   show(req, res) {
+    res.render('search');
   }
 }
 module.exports = new SiteController();

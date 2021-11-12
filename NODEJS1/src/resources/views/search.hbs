@@ -13,29 +13,16 @@
 
 {{!-- hien thi kq tim kiem --}}
 
-   <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">User</th>
-                <th scope="col">Pass</th>
-                <th scope="col">SDT</th>
-                <th scope="col">Ngày tạo</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            {{#each courses}}
-            <tr>
-                <th scope="row">{{sum @index 1}}</th>
-                <td>{{this.name}}</td>
-                <td>{{this.user}}</td>
-                <td>{{this.pass}}</td>
-                <td>{{this.sdt}}</td>
-                <td>{{this.createdAt}}</td>
-            </tr>
-            {{/each}}
-        </tbody>
-    </table>
+   <div class="row">
+        {{#each courses}}
+        <div class="col-sm-6 col-lg-4">
+            <div class="card card-courses-item">
+                <div class="card-body">
+                    <h5 class="card-title">User:{{this.name}}</h5>
+                    <p class="card-text">Pass:{{this.pass}}</p>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
 </div>
